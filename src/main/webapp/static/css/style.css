@@ -1,0 +1,313 @@
+*{
+margin:0px;
+padding:0px;
+font-family:Arial;
+}
+
+img{border:0px}
+
+html{
+width:100%;
+height:100%;
+}
+
+body{
+width:995px;
+height:100%;
+margin:0 auto;
+position:relative;
+}
+
+html > body{
+min-height:100%;
+height:auto
+}
+
+#header{
+background-image:url(../img/headerbg.gif);
+background-position:top left;
+background-repeat:repeat-x;
+padding:29px 0 0 55px;
+height:58px
+}
+
+#header img{float:left}
+
+#small{
+float:right;
+display:inline;
+margin:7px 109px 0 0
+}
+
+#small a{
+display:block;
+float:left;
+margin:0 0 0 11px
+}
+
+#menu{
+background-image:url(../img/menubg.gif);
+background-position:top left;
+background-repeat:repeat-x;
+height:29px;
+border-bottom:1px solid #2B2B2B;
+border-left:2px solid #2B2B2B;
+border-right:1px solid #2B2B2B
+}
+
+#menu li{
+list-style-type:none;
+float:left;
+width:94px;
+height:29px;
+background-image:url(../img/last-button.gif);
+background-position:0px 0px;
+background-repeat:no-repeat
+}
+
+#menu img{
+float:left;
+border-right:1px solid #2B2B2B
+}
+
+#below-header{
+height:215px;
+}
+
+#below-header img{
+float:left
+}
+
+#slogan{
+width:496px;
+height:215px;
+float:left;
+font-family:Arial;
+font-size:11px;
+color:#FDFFFA;
+background-image:url(../img/slogan.jpg);
+background-position:top left;
+background-repeat:no-repeat
+}
+
+#slogan-white{
+width:496px;
+height:215px;
+float:left;
+font-family:Arial;
+font-size:11px;
+color:#FDFFFA;
+background-image:url(../img/slogan-white.jpg);
+background-position:top left;
+background-repeat:no-repeat
+}
+
+#slogan p, #slogan-white p{
+display:block;
+margin:115px 0 0 45px;
+width:265px
+}
+
+#wrapper{
+width:995px;
+padding:0 0 80px 0;
+font-family:Arial;
+font-size:11px;
+color:#333333;
+display:table;
+}
+
+#big-column{
+width:451px;
+float:left;
+display:inline;
+margin:18px 29px 0 20px;
+/ margin-right:28px;
+}
+
+#big-column p, .about p{
+padding:17px 0 0 0
+}
+
+.title{
+padding:17px 0 0 0
+}
+
+#big-column p img{
+float:left;
+margin:0 25px 25px 2px
+}
+
+#small-column{
+width:495px;
+float:left
+}
+
+#special{
+width:495px;
+float:left;
+background-color:#D7E1C9;
+padding:0 0 60px 0;
+margin:0 0 60px 0;
+}
+
+#special p{
+width:285px;
+display:block;
+margin:-20px 0 10px 142px
+}
+
+#special a{
+display:block;
+color:#FFFFFF;
+text-decoration:none;
+padding:1px 4px;
+background-color:#678E33;
+float:left;
+display:inline;
+margin:0 0 0 142px
+}
+
+.offer{
+margin:0 0 0 22px;
+float:left;
+display:inline
+}
+
+.offer ul{
+width:452px;
+margin:25px 0 0 0
+}
+
+.offer li, .services li{
+list-style-type:none;
+background-image:url(../img/arrow.gif);
+background-position:0px 3px;
+background-repeat:no-repeat;
+line-height:20px;
+padding:0 25px 0 28px;
+width:170px;
+float:left
+}
+
+.offer a, .services a{
+color:#666666;
+text-decoration:underline
+}
+
+.offer a:visited, .services a:visited{text-decoration:underline}
+
+.offer a:hover, .services a:hover{text-decoration:none}
+
+#footer{
+width:995px;
+background-image:url(../img/footerbg.gif);
+background-position:top left;
+background-repeat:repeat-x;
+font-family:Arial;
+font-size:11px;
+color:#D7E1C9;
+text-align:center;
+padding:10px 0;
+line-height:18px;
+position:absolute;
+bottom:0px;
+left:0px;
+}
+
+#footer a{
+color:#D7E1C9;
+text-decoration:none;
+margin:0 7px
+}
+
+#footer a:visited{text-decoration:none}
+
+#footer a:hover{text-decoration:underline}
+
+#footer .bft{
+color:#78B624;
+text-decoration:none;
+margin:0 2px
+}
+
+#footer .bft:visited{text-decoration:none}
+
+#footer .bft:hover{text-decoration:underline}
+
+.news{
+width:193px;
+float:left;
+margin:18px 0 0 21px;
+display:inline;
+}
+
+.news p{
+display:block;
+padding:19px 0 0 0
+}
+
+.news span{
+display:block;
+width:68px;
+text-align:center;
+color:#ffffff;
+font-weight:bold;
+background-color:#6C9538;
+padding:2px 0;
+margin:0 0 5px 0
+}
+
+.news a{
+display:block;
+color:#1C5574;
+text-decoration:underline;
+margin:5px 0 0 0
+}
+
+.news a:visited{text-decoration:underline}
+
+.news a:hover{text-decoration:none}
+
+.about{
+width:452px;
+float:left;
+margin:18px 0 0 51px;
+display:inline;
+}
+
+.services{
+width:203px;
+float:left;
+margin:18px 0 0 60px;
+display:inline;
+}
+
+.services ul{
+width:203px;
+margin:25px 0 0 0
+}
+
+.services li{
+padding:0 0 0 28px;
+}
+
+.inner_copy{
+border:0;
+color:#fff;
+float:right;
+width:0.09%!important;
+margin:-100px;
+overflow:hidden;
+line-height:0px;
+padding:0px;
+font-size:11px
+}
+
+table tbody tr:nth-child(2n+1) {
+  background-color: #d7e1c9;
+}
+
+h1 {
+	color: #656565;
+}

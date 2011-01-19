@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+        
+    <context:component-scan base-package="br.com.felipesoares.finance.controller"/>
+    
+    <!-- this bean with the well known name generates view names for us -->
+    <bean id="viewNameTranslator" class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator"/>
+
+    <!-- maps request URLs to Controller names -->
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true"/> 
+		<property name="prefix" value=""/>
+		<property name="suffix" value=".ftl"/>
+		<property name="exposeSpringMacroHelpers" value="true"/>
+	</bean>
+	
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="configuration" ref="freemarkerConfiguration" />
+	</bean>
+	
+	<bean id="freemarkerConfiguration" class="org.springframework.ui.freemarker.FreeMarkerConfigurationFactoryBean">
+		<property name="templateLoaderPaths">
+			<list>
+				<value>/WEB-INF/pages/</value>
+				<value>/WEB-INF/macros/</value>
+				<value>classpath:org/springframework/web/servlet/view/freemarker</value>
+			</list>
+		</property>
+		<property name="freemarkerSettings">
+			<props>
+			<prop key="datetime_format">MM/dd/yyyy</prop>
+			<prop key="number_format">#</prop>
+			<prop key="whitespace_stripping">true</prop>
+			</props>
+		</property>
+		<property name="freemarkerVariables">
+			<map>
+			<entry key="xml_escape" value-ref="fmXmlEscape" />
+			<entry key="html_escape" value-ref="fmHtmlEscape" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />
+	
+	<bean id="fmHtmlEscape" class="freemarker.template.utility.HtmlEscape" />
+</beans>
